@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import ConfigurationAndData.ConfigFileReader;
 import PageFactory.PgAZHomePage;
 import PageFactory.PgAZPreLogin;
 
@@ -12,6 +13,7 @@ public class TestContext {
 	 private WebDriver TCDriver ;
 	 private PgAZPreLogin objPgAZPreLogin; 
 	 private PgAZHomePage objPgAZHomePage;
+	 public ConfigFileReader objConfigFileReader;
 	
 	public TestContext ()
 	{
@@ -20,6 +22,7 @@ public class TestContext {
 	this.TCDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	this.objPgAZPreLogin = new PgAZPreLogin(TCDriver);
 	this.objPgAZHomePage = new PgAZHomePage(TCDriver);
+	this.objConfigFileReader = new ConfigFileReader();
 	}
 
 	public WebDriver getTCDriver() {

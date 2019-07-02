@@ -25,7 +25,9 @@ public class PgAZHomePage {
 	public WebElement txtPostSearch;
 	
 	@FindBy(xpath ="//div[@class='a-section a-spacing-medium']//span[@data-a-color='price']/span[@class='a-offscreen']")
-	public List <WebElement> txtPriceOfProducts;
+	public List <WebElement> PriceOfProducts;
 	
+	@FindBy(xpath ="//div[@class='a-section a-spacing-medium']//span[@class='a-size-medium a-color-base a-text-normal']")
+	public List <WebElement> NameOfProducts;
 			
 }
